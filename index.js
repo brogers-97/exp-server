@@ -6,6 +6,7 @@ const axios = require('axios')
 const User = require('./models/user')
 const Character = require('./models/Character')
 const Boss = require('./models/Boss')
+const Deck = require('./models/Deck')
 // require('./models')
 
 app.use(express.urlencoded({ extended: false}))
@@ -27,12 +28,32 @@ app.use(express.json())
 //         console.log(err)
 //     })
 
+// Deck.create({
+//     name: 'Barbarian',
+//     deckId: 'barb',
+//     cards: [
+//         {
+//             attack: 'Big Swing',
+//             damage: 9,
+//             description: 'Aim Your Mace At the Enemies Skull Causing Damage'
+//         },
+//         {
+//             attack: 'Jabs',
+//             damage: 3,
+//             description: 'Punch The Enemy With Your Iron Fists Multiple Times'
+//         }
+//     ]
+// })
+//     .then(deck => {
+//         console.log(deck)
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
+
 // Character.create({
-//     name:'Elf',
-//     attacks: [{
-//         attack: 'arrow shot',
-//         damage: 10
-//     }]
+//     name:'Barbarian',
+//     health: 105
     
 // })
 //     .then(character => {
@@ -43,12 +64,35 @@ app.use(express.json())
 //     })
 
 // User.create({ 
-//     name: 'Jake', 
-//     email: 'jake@i.ly', 
-//     meta: {
-//         age: 26,
-//         website: 'http.lmao'
-//     }
+//     name: 'SilencedKhan', 
+//     saveState: [
+//         {
+//             saveName: 'Save 1',
+//             character: 'Elf',
+//             deck: 'Elf Deck',
+//             boss: 'Goroth',
+//             characterHealth: 27,
+//             bossHealth: 74
+//         },
+//         {
+//             saveName: 'Save 3',
+//             character: 'Elf',
+//             deck: 'Elf Deck',
+//             boss: 'Goroth',
+//             characterHealth: 11,
+//             bossHealth: 32
+//         },
+//         {
+//             saveName: 'tough SOB',
+//             character: 'Barbarian',
+//             deck: 'Barbarian Deck',
+//             boss: 'Flucifer',
+//             characterHealth: 4,
+//             bossHealth: 185
+//         }
+//     ],
+//     email: 'khan@i.ly'
+    
 // })
 //     .then(user => {
 //         console.log(user)
@@ -58,15 +102,6 @@ app.use(express.json())
 //     })
 
 
-
-
-
-// db.once('open', function() {
-//     console.log(`Connected to MongoDB at ${db.host}:${db.port}`)
-// })
-// db.on('error', function(err) {
-//     console.error(`Daabase error:\n${err}`)
-// })
 
 
 app.get('/', (req, res) => {
@@ -80,6 +115,7 @@ app.get('/', (req, res) => {
 app.use('/users', require('./controllers/users.js'))
 app.use('/characters', require('./controllers/characters.js'))
 app.use('/bosses', require('./controllers/boss.js'))
+app.use('/decks', require('./controllers/decks.js'))
 
 app.listen(PORT, () => {
     console.log(`is that port ${PORT} I hear? 🙉`)

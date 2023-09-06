@@ -4,7 +4,7 @@ const db = require('../models')
 router.get('/', async (req, res) => {
     try {
         const characters = await db.Character.find({})
-        res.send(characters)
+        res.json({results: characters})
     } catch(err) {
         console.log(err)
         res.status(500).json({message: "internal server error"})

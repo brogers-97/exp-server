@@ -14,5 +14,6 @@ db.on('error', function(err) {
 module.exports = {
     User: require('./user'),
     Character: require('./Character'),
-    Boss: require('./Boss')
+    Boss: require('./Boss'),
+    Deck: require('./Deck')
 }

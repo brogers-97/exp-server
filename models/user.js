@@ -3,15 +3,21 @@ const mongoose = require('mongoose')
 // create the schema
 const userSchema = new mongoose.Schema({
     name: String,
+    saveState: [
+        {
+            saveName: String,
+            character: String,
+            deck: String,
+            boss: String,
+            characterHealth: Number,
+            bossHealth: Number
+        }
+    ],
     email: {
         type: String,
         required: true,
         unique: true,
     },
-    meta: {
-        age: Number,
-        website: String
-    }
 }, {
     timestamps: true
 })
