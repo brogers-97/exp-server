@@ -29,16 +29,16 @@ app.use(express.json())
 //     })
 
 // Deck.create({
-//     name: 'Barbarian',
-//     deckId: 'barb',
+//     name: 'Elf Deck',
+//     deckId: 'elf2',
 //     cards: [
 //         {
-//             attack: 'Big Swing',
+//             attack: 'elf 2 attack',
 //             damage: 9,
 //             description: 'Aim Your Mace At the Enemies Skull Causing Damage'
 //         },
 //         {
-//             attack: 'Jabs',
+//             attack: 'elf 2 attack',
 //             damage: 3,
 //             description: 'Punch The Enemy With Your Iron Fists Multiple Times'
 //         }
@@ -69,7 +69,7 @@ app.use(express.json())
 //         {
 //             saveName: 'Save 1',
 //             character: 'Elf',
-//             deck: 'Elf Deck',
+//             deckId: 'elf',
 //             boss: 'Goroth',
 //             characterHealth: 27,
 //             bossHealth: 74
@@ -77,7 +77,7 @@ app.use(express.json())
 //         {
 //             saveName: 'Save 3',
 //             character: 'Elf',
-//             deck: 'Elf Deck',
+//             deckId: 'elf2',
 //             boss: 'Goroth',
 //             characterHealth: 11,
 //             bossHealth: 32
@@ -85,7 +85,7 @@ app.use(express.json())
 //         {
 //             saveName: 'tough SOB',
 //             character: 'Barbarian',
-//             deck: 'Barbarian Deck',
+//             deckId: 'barb',
 //             boss: 'Flucifer',
 //             characterHealth: 4,
 //             bossHealth: 185

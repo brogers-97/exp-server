@@ -5,9 +5,12 @@ const userSchema = new mongoose.Schema({
     name: String,
     saveState: [
         {
-            saveName: String,
+            saveName: {
+                type: String,
+                unique: true,
+            },
             character: String,
-            deck: String,
+            deckId: String,
             boss: String,
             characterHealth: Number,
             bossHealth: Number
