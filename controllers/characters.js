@@ -11,4 +11,12 @@ router.get('/', async (req, res) => {
     }
 })
 
+// router.get('/admin', async (req, res) => {
+//     try {
+//         const characters = await db.Character.find
+//     } catch (error) {
+        
+//     }
+// })
+
 module.exports = router
